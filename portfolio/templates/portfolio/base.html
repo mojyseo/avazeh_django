@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "portfolio/main.css" %}">
+    <link rel="shortcut icon" href="{% static "portfolio/favicon-32x32.png" %}" type="image/png">
+    <title>mojtaba madadi</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="navi" href="/">Home</a>
+        <a class="navi" href="/blog">Blog</a>
+        <a class="navi" href="#">Contact</a>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <div class="container y mandatory-scroll-snapping" id="cont" dir="ltr">
+        <div class="controll">
+            <div class="page" id="page1">
+
+                <div class="header">
+                    <div class="avatar">
+                        <img width="44px" src="{% static "portfolio/logo.png" %}" alt="logo">
+                        <p>Mojtaba Madadi</p>
+                    </div>
+                    <div class="lang">
+                        <div class="activel" id="eng"><a href="./main.html" onclick="langch(0)">eng</a></div>
+                        <div class=" deal" id="fa"><a href="./fa.html" onclick="langch(1)">fa</a></div>
+                    </div>
+                </div>
+
+
+
+
+
+                <script src="main.js"></script>
+</body>
+
+</html>
+
+{% comment %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "portfolio/main.css" %}">
+</head>
+
+<body>
+    <div id="headermain">
+        <div id="headerlogo">
+            <h2>LoGo</h2>
+        </div>
+        <div class="headernav mobileOff">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </div>
+        <div id="ham" onclick="mobileNav()">X</div>
+        <div id="mobileOn">
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li id="closenav" onclick="closeNav()">X</li>
+        </div>
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <script>
+
+        function mobileNav() {
+            document.getElementById("ham").style.right = "-100px";
+            document.getElementById("mobileOn").style.right = "20px";
+        }
+        function closeNav() {
+            document.getElementById("ham").style.right = "20px";
+            document.getElementById("mobileOn").style.right = "-100px";
+        }
+
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+
+</html> {% endcomment %}

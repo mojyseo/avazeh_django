@@ -1,0 +1,44 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+        <div class="controll">
+
+
+
+
+    <h3>{{ posts.count }} post{{ posts.count|pluralize }} has been added</h3>
+
+    {% for post in posts  %}
+    <div class="card">
+
+        <h2> {{ post.title }}
+        </h2>
+        <h3> {{ post.description|striptags|truncatechars:100 }}
+        </h3>
+        <img src="{{ post.image.url }}" width="240px" alt="">
+        <span>{{ post.date|date:'d M Y' }}</span>
+        <a href="{{ post.id }}/">view post</a>
+    </div>
+
+    {% endfor %}
+
+
+
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="footerinfo">
+                    <p>Email : mojyseo@gmail.com</p>
+                    <p>phone : +98911791xxxx</p>
+                </div>
+
+                <a href="#">leave a message...</a>
+            </div>
+
+            <small>all rights reserved by mojtaba madadi</small>
+        </footer>
+
+{% endblock %}

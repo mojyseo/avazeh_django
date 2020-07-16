@@ -1,0 +1,23 @@
+
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<div class="progress-header">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="card">
+
+    <h2> {{ post.title }}
+    </h2>
+    <p> {{ post.description|safe }}
+    </p>
+    <img src="{{ post.image.url }}" width="240px" alt="">
+    <span>{{ post.date|date:'jS F Y' }}</span>
+    <a href="/blog/">go back</a>
+</div>
+
+{% endblock %}
