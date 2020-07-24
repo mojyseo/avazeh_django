@@ -22,6 +22,13 @@ from portfolio import views as portfolio_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', portfolio_views.home, name='home'),
+    path('en/', portfolio_views.home_en, name='home-en'),
+    path('about/', portfolio_views.about, name='about'),
+    path('about/en/', portfolio_views.about_en, name='about-en'),
+    path('products/', portfolio_views.products, name='products'),
+    path('products/en/', portfolio_views.products_en, name='products-en'),
+    path('contact/', portfolio_views.contact, name='contact'),
+    path('contact/en/', portfolio_views.contact_en, name='contact-en'),
     path('blog/', include('blog.urls')),
 ]
 

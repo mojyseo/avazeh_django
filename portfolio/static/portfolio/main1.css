@@ -171,7 +171,6 @@
   text-align: center;
 }
 .projs a {
-  margin-top: 8vh;
   text-decoration: none;
   color: #ffffff;
   background-color: #6891ff;
@@ -181,11 +180,12 @@
 }
 .card {
   margin: 0 30px;
-  width: 270px;
+
+  width: 250px;
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  height: 350px;
+  height: 300px;
 }
 
 /* On mouse-over, add a deeper shadow */

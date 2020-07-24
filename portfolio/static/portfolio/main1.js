@@ -4,6 +4,8 @@ const navitems = document.getElementsByClassName("navi");
 
 function langch(e) {
   if (e == 0) {
+    console.log(12);
+
     eng.classList.add("activel");
     eng.classList.remove("deal");
     fa.classList.add("deal");
@@ -17,10 +19,11 @@ function langch(e) {
 }
 
 document.body.onscroll = function () {
+  console.log(1);
+
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     for (let i = 0; i < navitems.length; i++) {
       navitems[i].classList.add("navrotate");
-      console.log(2324);
     }
   } else {
     for (let i = 0; i < navitems.length; i++) {

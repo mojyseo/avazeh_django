@@ -1,0 +1,57 @@
+{% extends 'portfolio/base-en.html' %}
+
+{% load static %}
+
+{% block content %}
+
+        <div class="m-links-en" id="links">
+            <a href="/en/" class="fa fa-home"> Home</a>
+            <a href="/about/en"  class="fa fa-info-circle"> About us</a>
+            <a href="/blog/en" id="m-active-page" class="fa fa-newspaper-o"> Blog</a>
+            <a href="/products/en" class="fa fa-code"> Products</a>
+            <a href="/contact/en" class="fa fa-envelope"> Contact</a>
+        </div>
+        <nav class="mon" id="mon">
+            <button class="fa fa-bars" id="ham" onclick="mobileNav('en')"></button>
+            <h2><a id="logo" href="/en/" class="m-logo">Avazeh</a> </h2>
+
+
+            <div class="m-lang"><a href="/blog/">فا</a></div>
+        </nav>
+        <div class="els" onclick="closeNav()">
+            <nav class="mof">
+                <h2><a href="/" class="logo">Avazeh</a> </h2>
+
+                <div class="navbar">
+                    <div class="links">
+                        <a href="/en/">Home</a>
+                        <a href="/about/en">About us</a>
+                        <a href="/blog/en/" id="m-active-page">Blog</a>
+                        <a href="/products/en/">Products</a>
+                        <a href="/contact/en/">Contact</a>
+                        <div class="lang"><a href="/blog/">فا</a></div>
+                    </div>
+
+                </div>
+            </nav>
+
+
+
+           
+                <h3>{{ posts.count }} post{{ posts.count|pluralize }} has been added</h3>
+
+                {% for post in posts  %}
+                <div class="card">
+
+                    <h2> {{ post.title }}
+                    </h2>
+                    <h3> {{ post.description|striptags|truncatechars:100 }}
+                    </h3>
+                    <img src="{{ post.image.url }}" width="240px" alt="">
+                    <span>{{ post.date|date:'d M Y' }}</span>
+                    <a href="{{ post.id }}/">view post</a>
+                </div>
+
+                {% endfor %}
+
+{% endblock %}
