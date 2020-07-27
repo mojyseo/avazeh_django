@@ -127,13 +127,15 @@
                         <p> {{ project.description|striptags|truncatechars:100 }}
                         </p>
                         {% if project.link %}
-                        <a href="{{ project.link }}" target="_blank" class="btn-morep">جزئیات بیشتر ...</a>
+                        <a href="/products/{{ project.id }}" target="_blank" class="btn-morep">جزئیات بیشتر ...</a>
                         {% endif %}
                     </div>
                     {% endfor %}
 
 
                 </div>
-                <a href="#R" class="btn-all">مشاهده همه</a>
+                <a href="/products/" class="btn-all">مشاهده همه</a>
             </div>
+                <a href="/contact/" class="fa fa-envelope btn-contact"> تماس با ما</a>
+
             {% endblock %}

@@ -13,16 +13,28 @@
 </head>
 
 <body onload="showPage()">
+    <div class="loader" id="loader">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <span>Loading</span>
+        </div>
+    </div>
 
-    <body>
+    <div class="" id="loaderoff">
+
         <div class="fake-mon" onclick="closeNav()"></div>
 
+        {% block content%}
 
-    {% block content%}
 
+        {% endblock  %}
+    </div>
 
-    {% endblock  %}
-            </div>
 
         <footer onclick="closeNav()">
             <div class="footer">
