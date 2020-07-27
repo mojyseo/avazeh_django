@@ -27,9 +27,14 @@ urlpatterns = [
     path('about/en/', portfolio_views.about_en, name='about-en'),
     path('products/', portfolio_views.products, name='products'),
     path('products/en/', portfolio_views.products_en, name='products-en'),
+    path('products/<int:product_id>/', portfolio_views.product , name='product'),
+    path('products/en/<int:product_id>/', portfolio_views.product_en , name='product'),
+
     path('contact/', portfolio_views.contact, name='contact'),
+    path('contact/msg-sent', portfolio_views.msg_sent, name='msg-sent'),
     path('contact/en/', portfolio_views.contact_en, name='contact-en'),
     path('blog/', include('blog.urls')),
+    
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
